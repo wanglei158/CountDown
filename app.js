@@ -15,7 +15,7 @@ proxy.on('error',function(err,req,res){
 var server = http.createServer(function(req,res){
     var host = req.headers.host,
         ip = req.headers['x-forwarded-for']||req.connection.remoteAddress;
-        console.log(req.connection.remoteAddress);
+        console.log(req.originalUrl);
         var domain = 'longxiaxiao.com';
         var hostr = host.substr((host.indexOf(domain)+domain.length));
         switch(hostr){
