@@ -13,11 +13,11 @@ proxy.on('error',function(err,req,res){
 })
 
 var server = http.createServer(function(req,res){
-    var host = req.headers.host,
+    var fullUrl = req.headers.referer,
         ip = req.headers['x-forwarded-for']||req.connection.remoteAddress;
-        console.log(req);
+        console.log(req.headers.referer);
         var domain = 'longxiaxiao.com';
-        var hostr = host.substr((host.indexOf(domain)+domain.length));
+        var hostr = fullUrl.substr((fullUrl.indexOf(domain)+domain.length));
         switch(hostr){
             case '/static':
                 proxy.web(req,res,{target:'http://localhost:8000'})
