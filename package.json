@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "用于longxiaxiao.com的node 服务器 ## 你好，王尼玛，北极圈去吗？ * 去不了",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanglei158/server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanglei158/server/issues"
+  },
+  "homepage": "https://github.com/wanglei158/server#readme",
+  "dependencies": {
+    "http-proxy": "^1.17.0"
+  }
+}
